@@ -11,10 +11,8 @@ app.set('view engine','ejs'); // view 세팅
 
 //cosole.log('a'); // 여기에선 한번만뜸
 app.get('/',(req,res)=>{
-	//console.log('a');  // 서버랑은 상관없음 터미널에만 뜸 // 실행할때마다뜸
-	//res.render('../views/index'); // 파일을 요청받아서 render 그리다
-	// ../가 되는건 아래와 같은 이유	
-	// views ejs를 위에서 /views로 위치를 세팅했기때문에 index만 해도 연결됨
-	res.render('index', {a:10}); // ejs파일에 파일을 불러옴
-
-})
+  //console.log('a');  // 서버랑은 상관없음 터미널에만 뜸 // 실행할때마다뜸
+  //res.render('../views/index'); // 파일을 요청받아서 랜더해줌
+  // views ejs를 위에서 /views로 위치를 세팅했기때문에 index만 해도 연결됨
+  res.render('index', {a:10}); // ejs파일에 파일을 불러옴
+});
