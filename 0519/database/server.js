@@ -29,6 +29,8 @@ app.get('/',(req,res)=>{
   res.render('join');
 })
 
+
+// 회원가입
 app.post('/register',(req,res)=>{
   connection.query('SELECT * FROM users WHERE name="'+req.body.name+'"', function(err, rows){
     if (err) {
