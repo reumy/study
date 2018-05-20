@@ -7,20 +7,20 @@ var connection = mysql.createConnection({
 });
 
 connection.connect(function(err){
-	if (err) {
-		console.log(err);
-		return; // 안쓰면 이거뜨고 밑에거도 뜸
-	}
-	console.log('connect succes!')
+  if (err) {
+    console.log(err);
+    return;
+  }
+  console.log('connect succes!')
 });
 
 
 // 데이터 추가
 /*
-connection.query('INSERT INTO users (name, password) VALUES("abc", "1111")', function (err, rows){ // 따옴표확인
+connection.query('INSERT INTO users (name, password) VALUES("abc", "1111")', function (err, rows){
   if (err) {
-  	console.log(err);
-  	return;
+    console.log(err);
+    return;
   }
   console.log(rows);
 });
@@ -31,8 +31,8 @@ connection.query('INSERT INTO users (name, password) VALUES("abc", "1111")', fun
 /*
 connection.query('SELECT * FROM users', function (err, rows){
   if (err) {
-  	console.log(err);
-  	return;
+    console.log(err);
+    return;
   }
   console.log(rows);
 });
