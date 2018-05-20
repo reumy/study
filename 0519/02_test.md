@@ -49,6 +49,7 @@ connect succes!
 > cmd에서 콘솔로 확인
 
 #### 4. 데이터 조회
+- 쿼리를 날려서 데이터베이스와 연결
 ```
 connection.query('SELECT * FROM users', function (err, rows){
   if (err) {
