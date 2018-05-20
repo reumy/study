@@ -14,7 +14,7 @@
 
 - `korea` 이름의 데이터베이스 생성
 - Collation은 utf8 - utf_general_ci 선택
-- 한번 선택하면 그 아래 자식들은 다 따라감
+  - 한번 선택하면 그 아래 자식들은 다 따라감
 
 3. 테이블 생성
 
@@ -22,10 +22,10 @@
 
 - `users` 이름의 테이블 생성
 - id, name, password를 만듬
-- PK(primary key) : 기본키 \/ 데이터의 고유성을 보장 \/ id열에 주로 사용
-- NN(not null) : 값이 반드시 들어와야함 \/ id열에 반드시 사용
-- UQ(unique index) : 중복되는 값이 없도록 막아줌 \/ id열에 주로 사용
-- AI(auto incremental) : 해당 값이 없을경우 자동으로 숫자를 증가시킴
+  - PK(primary key) : 기본키 \/ 데이터의 고유성을 보장 \/ id열에 주로 사용
+  - NN(not null) : 값이 반드시 들어와야함 \/ id열에 반드시 사용
+  - UQ(unique index) : 중복되는 값이 없도록 막아줌 \/ id열에 주로 사용
+  - AI(auto incremental) : 해당 값이 없을경우 자동으로 숫자를 증가시킴
 
 4. MySQL cmd에서 데이터 직접 추가
 - 워크벤치에서 직접 데이터를 추가할 수 있지만 MySQL cmd에서도 연동이 되는지 확인해보기
