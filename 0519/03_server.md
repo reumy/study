@@ -46,6 +46,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : true }));
 ```
+- `.use : 미들웨어를 의미`
+- `미들웨어 : 서버가 실행하기전에 실행해 중간에 어떤 기능을 심어주는 것`
 - `bodyParser.json() : body를 json 형태로 받음`
 - `bodyParser.urlencoded({ extended : true }) : body가 인코딩해서 사람이 볼 수 있게 함`
 
@@ -102,7 +104,9 @@ http://localhost:8080/register
 ```
 Cannot GET /register
 ```
-> 주소를 직접쳐서 들어갔으니 GET방식이 됨<br/>그래서 POST, GET 둘다 라우트를 해줘야 함
+> 주소를 직접쳐서 들어갔으니 GET방식이 됨
+
+- 이렇게 들어온는 방식에따라 달라지기때문에 POST, GET 둘다 라우트를 해줘야 함
 
 
 ## 회원가입
