@@ -110,3 +110,89 @@ Cannot GET /register
 
 
 ## 회원가입
+```
+app.post('/register',(req,res)=>{
+  console.log(req.body);
+});
+```
+> 응답해줄것이 정의되지 않아서 무한로딩 됨
+
+
+#### 1. 입력한 정보를 데이터베이스에 추가
+- req.body 객체에서 name과 password를 추출해서 해당 데이터를 데이터베이스에 삽입하기
+```
+app.post('/register',(req,res)=>{
+  connection.query('INSERT INTO users SET ?', 
+
+req.body, function (err, rows){
+    if (err) {
+      console.log(err);
+      return;
+    }
+    res.redirect('/login');
+  });
+});
+```
+> req.body를 두번째 인자로주면 그 안에 전송한 데이터가 객체형태로 넘어옴<br/>즉, \[{name:req.body.name, password:req.body.password}] 이 형태로 넘어옴<br/>단, 데이터베이스의 컬럼이름과 넘어올 정보의 이름이 각각 같기때문에 req.body만 해줘도 가능한 것
+
+- `redirect() : 사용자를 인자의 루트로 이동시킴`
+
+- 입력
+
+![01](img/04.png)<br/>
+
+- 결과
+```
+Cannot GET /login
+```
+
+![01](img/05.png)
+> login를 라우트해주지 않아서 오류메세지가 뜨지만 데이터베이스를 확인해보면 입력한값이 데이터로 추가됨
+
+
+#### 2. 중복된 아이디일때 경고창 띄우기
+```
+app.post('/register',(req,res)=>{
+  connection.query('SELECT * FROM users WHERE name="' + req.body.name + '"', function(err, rows){
+    if (err) {
+      console.log(err);
+      return;
+    }
+    if (rows.length > 0){
+      res.send('<script>alert("아이디가 이미 있음");location.href="/";</script>')
+    } else {
+      connection.query('INSERT INTO users SET ?', req.body, function (err, rows){
+        if (err) {
+          console.log(err);
+          return;
+        }
+        res.redirect('/login');
+      });
+    }
+  });
+});
+```
+- 코드분석
+```
+connection.query('SELECT * FROM users WHERE name="' + req.body.name + '"', function(err, rows){...});
+```
+> name="'+req.body.name+'" 이 코드를 통해 사용자가 전송한 name값을 데이터베이스에서 조회할 수 있음
+```
+if (rows.length > 0){
+  res.send('<script>alert("아이디가 이미 있음");location.href="/";</script>')
+}
+```
+> 넘어온 name값이 데이터베이스에 있다면 rows의 갯수는 1이 될거고 1은 0보다 크기때문에 이미 해당 name이 존재한다는 사실을 알 수 있으므로 다시 홈으로 이동시킴
+
+- res.redirect('/') 를 하지않고 스크립트 태그안에 href로 이동시킨 이유
+> 응답(res)은 한번만 할 수 있음
+```
+connection.query('INSERT INTO users SET ?', req.body, function (err, rows){
+  if (err) {
+    console.log(err);
+    return;
+  }
+  res.redirect('/login');
+});
+```
+> 중복되는 아이디(name)가 없다면 login페이지로 이동시킴
