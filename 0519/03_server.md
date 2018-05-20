@@ -110,6 +110,7 @@ Cannot GET /register
 
 
 ## 회원가입
+- 회원가입이라서 보안의 이유로 POST 방식을 라우트함
 ```
 app.post('/register',(req,res)=>{
   console.log(req.body);
