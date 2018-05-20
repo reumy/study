@@ -51,3 +51,7 @@ INSERT INTO users (name, password) VALUES ('admin', '123qwe');
 - 인코딩, 디코딩
 - npm express session : 로그인을 유지시키고 로그인, 로그아웃을 쉽게 가능하게함
 - mvc
+
+
+### 다음주에 배울 것
+- React, json, 개발
