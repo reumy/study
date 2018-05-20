@@ -217,7 +217,7 @@ login.ejs
   <h1>로그인</h1>
   <hr/ >
 
-  <form action="/register" method="POST">
+  <form action="/check" method="POST">
     아이디 <input type="text" name="name" />
     비밀번호 <input type="password" name="password" />
     <button type="submit">전송</button>
@@ -226,6 +226,8 @@ login.ejs
 </body>
 </html>
 ```
+> 로그인 페이지의 정보는 check로 라우트 됨
+
 main.ejs
 ```
 <!DOCTYPE html>
