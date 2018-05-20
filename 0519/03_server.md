@@ -197,3 +197,87 @@ connection.query('INSERT INTO users SET ?', req.body, function (err, rows){
 });
 ```
 > 중복되는 아이디(name)가 없다면 login페이지로 이동시킴
+
+
+## 로그인
+- 로그인에 성공하면 메인(main) 페이지로 이동, 아이디가 틀리면 회원가입(register) 페이지로, 비밀번호가 틀리면 다시 로그인(login) 페이지로 이동
+
+
+#### 1. 페이지 생성
+login.ejs
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+</head>
+<body>
+
+  <h1>로그인</h1>
+  <hr/ >
+
+  <form action="/register" method="POST">
+    아이디 <input type="text" name="name" />
+    비밀번호 <input type="password" name="password" />
+    <button type="submit">전송</button>
+  </form>
+
+</body>
+</html>
+```
+main.ejs
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+</head>
+<body>
+
+  <h1>메인페이지</h1>
+
+</body>
+</html>
+```
+
+
+#### 2. 코드작성
+```
+app.post('/check',(req,res)=>{
+  connection.query('SELECT * FROM users WHERE name="' + req.body.name + '"', function(err, rows){
+    if (err) {
+      console.log(err);
+      return;
+    }
+    if (rows.length > 0) {
+      if (rows[0].password == req.body.password) {
+        res.redirect('/main');
+      } else {
+        res.redirect('/login');
+      }
+    } else {
+      res.redirect('/');	
+    }
+  });
+});
+```
+- 코드분석
+```
+connection.query('SELECT * FROM users WHERE name="'+req.body.name+'"', function(err, rows){...});
+```
+> 입력하는 아이디(name)값을 데이터베이스에서 검색해서 해당 name의 모든 정보를 가져옴
+
+> \[{id:??, name:??, password:?? }] 이런식으로 모든 정보가 배열안에 '하나'의 요소로만 넘어옴<br/>이유는 회원가입 당시 하나의 아이디로만 가입이 가능했기때문에 유니크한 값이라는 것이 입증된 셈
+
+```
+if (rows.length > 0) {...}
+```
+> 만약 해당 아이디 있다면 해당 코드를 실행
+```
+if (rows[0].password == req.body.password) {...}
+```
+> 첫번째 배열 즉, 해당 정보의 비밀번호가 전송시킨 비밀번호와 같다면 해당 코드를 실행
+
+> 애초에 req.body가 하나의 요소만을 가지고 있기 때문에 rows[0]이 모든 정보를 가르키게 되는 것
