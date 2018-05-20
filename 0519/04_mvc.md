@@ -34,7 +34,9 @@ module.exports = new Login();
 ```
 const Login = function(){...});
 ```
-> () => {} 는 new *()가 되지않기 때문에 function을 씀<br/> () => {} 를 쓰려면 class Login = () => {} 이런식으로 써야함
+> 클래스를 만들어 줌
+
+- () => {} 는 new \*()가 되지않기 때문에 function을 씀<br/> () => {} 를 쓰려면 class Login = () => {} 이런식으로 써야함
 
 ```
 view : (req, res) => {...}
