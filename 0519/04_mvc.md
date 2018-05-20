@@ -1,7 +1,7 @@
 ## MVC
 - node에는 mvc 패턴이 없음
 - node mvc 만드는 법 검색해서 익힐 것
-- promise, async, 언씽크...?
+  - promise, async, 언씽크...?
 - [선생님 github](github.com/riahnrhyme) 참고하기
   - coconut - router.js 와 controllers 폴더 참고
 > 한 테이블만 가져와서 쿼리를 날리고 실제 쿼리는 models 폴더에 있음
