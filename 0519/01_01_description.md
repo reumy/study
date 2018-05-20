@@ -38,6 +38,6 @@ INSERT INTO users (name, password) VALUES ('admin', '123qwe');
 - 확인
 
 ![01](img/03.png)
-> 워크벤치에 데이터가 입력됨
+> id에 값은 입력하지 않아서 auto incremental에 의해 자동으로 숫자가 부여됨
 
 - 직접 입력할때는 원하는 데이터행을 더블클릭하면 입력할 수 있음
