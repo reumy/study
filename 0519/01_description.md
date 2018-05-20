@@ -1,7 +1,7 @@
 ## MySQL Workbench
 - MySQL GUI 프로그램
 - MySQL을 다운받으면 자동으로 다운받아지지만 없을경우 직접설치
--[MySQL 홈페이지](https://dev.mysql.com/downloads/workbench/)에서 다운
+- [MySQL 홈페이지](https://dev.mysql.com/downloads/workbench/)에서 다운
 - 로그인, 회원가입 창에서 "No thanks, just start my download." 를 누르면 가입없이 다운가능
 
 #### 1. 설치 후 실행
@@ -41,3 +41,13 @@ INSERT INTO users (name, password) VALUES ('admin', '123qwe');
 > id에 값은 입력하지 않아서 auto incremental에 의해 자동으로 숫자가 부여됨
 
 - 직접 입력할때는 원하는 데이터행을 더블클릭하면 입력할 수 있음
+
+
+### TIP
+- npm 설치시 설치취소도 ctrl + c로 가능
+
+
+### 공부해야할 것
+- 인코딩, 디코딩
+- npm express session : 로그인을 유지시키고 로그인, 로그아웃을 쉽게 가능하게함
+- mvc
