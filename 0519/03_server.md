@@ -123,9 +123,7 @@ app.post('/register',(req,res)=>{
 - req.body 객체에서 name과 password를 추출해서 해당 데이터를 데이터베이스에 삽입하기
 ```
 app.post('/register',(req,res)=>{
-  connection.query('INSERT INTO users SET ?', 
-
-req.body, function (err, rows){
+  connection.query('INSERT INTO users SET ?', req.body, function (err, rows){
     if (err) {
       console.log(err);
       return;
