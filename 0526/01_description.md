@@ -178,6 +178,7 @@ class App extends React.Component{
 
 #### 2. CSS 외부파일 방식
 - 개발자도구에서 코드의 위치를 찾을 수 없음 수정이 어려움
+
 src\App.css
 ```
 .box {color:blue;}
@@ -186,6 +187,7 @@ src\App.css
 
 #### 3. CSS 정적파일 방식
 - 개발자도구에서 코드의 위치를 찾을 수 있으므로 수정에 용이함 (추천)
+
 public\style.css
 ```
 .box2 {color:green;}
@@ -349,6 +351,7 @@ class Close extends Component{
 <br/>![06](img/06.png)<br/>
 
 - 코드 간결화
+
 Open.js
 ```
 render(){
