@@ -177,9 +177,7 @@ class App extends React.Component{
 	- `{{}} : 객체임을 의미`
 
 #### 2. CSS 외부파일 방식
-- 개발자도구에서 코드의 위치를 찾을 수 없음 수정이 
-
-어려움
+- 개발자도구에서 코드의 위치를 찾을 수 없음 수정이 어려움
 src\App.css
 ```
 .box {color:blue;}
@@ -224,7 +222,7 @@ class App extends React.Component{
 
 - CSS 적용은 정적파일을 이용하는것이 편리하며 요즘은 사스에서의 방식을 사용함
 
-## props 와 state
+## (중요!) props 와 state 
 - props : 상위 컴포넌트가 전달해주는 데이터(값)
 - state : 자기자신 컴포넌트가 만든 데이터
 > state가 변경되면 해당 컴포넌트는 render 메소드를 자동으로 다시 실행함
