@@ -6,9 +6,9 @@ import App from './App';
 
 /*
 class App extends React.Component{
-	render(){
-		return <h1>클래스 리액트</h1>
-	}
+  render(){
+    return <h1>클래스 리액트</h1>
+  }
 }
 
 function App2(){
