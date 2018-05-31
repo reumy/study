@@ -332,7 +332,7 @@ export default Open;
 ```
 > 컴포넌트 내보내기
 
-### Clost.js
+### Close.js
 - 기본코드 생략
 ```
 class Close extends Component{
