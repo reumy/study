@@ -282,6 +282,8 @@ class List extends Component{
   }
 }
 ```
+> class 이름을 파일명과 맞추면 편함
+
 - 변수 num을 하위 컴포넌트에게 전달해보기
 ```
 import Open from './Open';
