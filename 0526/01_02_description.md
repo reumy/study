@@ -121,7 +121,7 @@ handleClick(){
 - componentWillUpdate : render 실행 후 업데이트 하기 전 실행
 - componentDidUpdate : render 실행 후 업데이트 된 후 실행
 - componentWillUnmount
-> *Will* : 전부 없어질 예정
+> \*Will\* : 전부 없어질 예정
 
 Open.js
 ```
