@@ -16,7 +16,7 @@ class List extends Component{
 	}
 
 	showClick(){
-		this.setState({show:this.state.show});
+		this.setState({show:!this.state.show});
 	}
 
   render(){
@@ -28,7 +28,7 @@ class List extends Component{
   			<button onClick={this.handleClick.bind(this)}>숫자증가</button>
   			<button onClick={this.showClick.bind(this)}>토글버튼</button>		
   			<hr />
-  			{(this.state.show) ? <Open count={num} upCount={this.handleClick.bind(this)}/>:''}
+  			{(this.state.show) && <Open count={num} upCount={this.handleClick.bind(this)}/>}
   		</div>
   	)
 	}
