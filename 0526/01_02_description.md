@@ -275,3 +275,6 @@ showClick(){
 {(this.state.show) && <Open count={num} upCount={this.handleClick.bind(this)}/>}
 ```
 > 위에 코드를 연산자를 이용해 간결화해줌
+- 결과
+
+<br/>![gif](img/01.gif)
