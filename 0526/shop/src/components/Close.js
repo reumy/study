@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
 class Close extends Component{
-
-	render(){
+  render(){
     const {count} = this.props;
     return (
       <div>
@@ -12,7 +11,5 @@ class Close extends Component{
       </div>
     )
   }
-	
 }
-
 export default Close;
