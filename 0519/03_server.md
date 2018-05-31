@@ -175,7 +175,7 @@ app.post('/register',(req,res)=>{
 ```
 connection.query('SELECT * FROM users WHERE name="' + req.body.name + '"', function(err, rows){...});
 ```
-> name="'+req.body.name+'" 이 코드를 통해 사용자가 전송한 name값을 데이터베이스에서 조회할 수 있음
+> SELECT * FROM users WHERE name="" 과 req.body.name의 문자결합으로 SELECT * FROM users WHERE name="req.body.nam"가 됨<br/>그래서 사용자가 전송한 name값을 데이터베이스에서 조회할 수 있음
 ```
 if (rows.length > 0){
   res.send('<script>alert("아이디가 이미 있음");location.href="/";</script>')
