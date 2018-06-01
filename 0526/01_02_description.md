@@ -1,7 +1,4 @@
-## react
-- react는 새로운걸로 덮어쓰는 것으로 삭제 기능을 대신함
-- 장점 : HTML처럼 작성할 수 있음<br/>이전, 이후 랜더링을 비교해서 바뀐부분만 바꿈<br/>컴포넌트의 재사용
-
+### react
 ## 적용2
 List.js
 ```
@@ -58,6 +55,7 @@ class List extends Component{
 
 - `constructor : 생성자, 최초에 실행`
 - `super() : 오버라이딩을 막아줌, 생성자가 한번만 읽힘`
+> 부모를 실행시켜 주기위해서는 super.* 을 사용함 그냥 실행하면 자식을 실행시키기 때문
 
 ```
 handleClick(){
