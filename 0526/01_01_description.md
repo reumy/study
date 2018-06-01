@@ -1,5 +1,13 @@
 ## react
-- TIP : sublime text 에서 babel 패키지를 다운받으면 알맞은 하이라이터가 보여짐
+- react는 새로운걸로 덮어쓰는 것으로 삭제 기능을 대신함
+- 장점
+  - HTML처럼 작성할 수 있음
+  - 이전, 이후 랜더링을 비교해서 바뀐부분만 바꿈
+  - 컴포넌트의 재사용
+- TIP
+	- [react 강좌](https://velopert.com/3613) 참고
+	- snippet : react코드 자동완성 기능
+	- babel : sublime text 에서 babel 패키지를 다운받으면 알맞은 하이라이터가 보여짐
 
 ## react 설치
 - 프로젝트가 생성될 디렉토리에 전역으로 설치 (ex. downloads)
