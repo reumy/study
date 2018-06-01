@@ -1,4 +1,6 @@
-### react
+## react
+- TIP : sublime text 에서 babel 패키지를 다운받으면 알맞은 하이라이터가 보여짐
+
 ## react 설치
 - 프로젝트가 생성될 디렉토리에 전역으로 설치 (ex. downloads)
 ```
@@ -11,7 +13,7 @@ create-react-app shop
 > shop(프로젝트명)으로 디렉토리를 생성하고 해당 폴더에 자동적으로 세팅해줌
 
 <br/>![img](img/01.png)
-> 개발한 파일을 운영용으로 만들어줌<br/>코드가 동작하는지 테스트해줌<br/>커스터마이징을 할 수 있게 config 해줌
+> 서버를 실행함<br/>개발한 파일을 운영용으로 만들어줌<br/>코드가 동작하는지 테스트해줌<br/>커스터마이징을 할 수 있게 config 해줌
 ```
 cd shop
 ```
@@ -179,7 +181,7 @@ class App extends React.Component{
 #### 2. CSS 외부파일 방식
 - 개발자도구에서 코드의 위치를 찾을 수 없음 수정이 어려움
 
-src\App.css
+src/App.css
 ```
 .box {color:blue;}
 ```
@@ -188,13 +190,13 @@ src\App.css
 #### 3. CSS 정적파일 방식
 - 개발자도구에서 코드의 위치를 찾을 수 있으므로 수정에 용이함 (추천)
 
-public\style.css
+public/style.css
 ```
 .box2 {color:green;}
 ```
-> src와 관련이 없기때문에 style.css 파일이 적용되려면 public\index.html에 선언을해서 css를 불러와야함
+> src와 관련이 없기때문에 style.css 파일이 적용되려면 public/index.html에 선언을해서 css를 불러와야함
 
-public\index.html
+public/index.html
 ```
 <link rel="stylesheet" href="%PUBLIC_URL%/style.css">
 ```
@@ -223,6 +225,7 @@ class App extends React.Component{
 <br/>![05](img/05.png)<br/>
 
 - CSS 적용은 정적파일을 이용하는것이 편리하며 요즘은 사스에서의 방식을 사용함
+> 여기에서 {this.title}를 하게되면 title은 App을 가르킴
 
 ## (중요!) props 와 state 
 - props : 상위 컴포넌트가 전달해주는 데이터(값)
@@ -231,7 +234,7 @@ class App extends React.Component{
 - react는 단방향 데이터 전송방식 (상→하 로만 가능)<br/>무조건 한 컴포넌트씩 (한 단계씩) 전달가능
 
 ## components 디렉토리
-- src\components 디렉토리 생성
+- src/components 디렉토리 생성
 - 컴포넌트 폴더를 하나 만들어서 분리하는것이 좋음 (박스, 버튼 ...)
 src\App.js
 ```
