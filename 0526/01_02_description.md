@@ -1,4 +1,7 @@
-### react
+## react
+- react는 새로운걸로 덮어쓰는 것으로 삭제 기능을 대신함
+- 장점 : HTML처럼 작성할 수 있음<br/>이전, 이후 랜더링을 비교해서 바뀐부분만 바꿈<br/>컴포넌트의 재사용
+
 ## 적용2
 List.js
 ```
@@ -106,13 +109,14 @@ handleClick(){
   this.setState({num:this.state.num + 1});
 }
 ```
-> 숫자증가 버튼을 누를때마다 모든 num이 1씩 증가함
+> 숫자증가 버튼을 누를때마다 모든 num이 1씩 증가함<br/>이것은 상위 컴포넌트가 메소드를 가지고 있는 것이며 실제로 상위에서 실행되지만 하위 컴포넌트에서 실행되는것처럼 보이는 것뿐이다.
 
 
 ## 라이프 사이클 (메소드 실행순서)
 - constructor : 클래스 실행시 최초 실행
 - render : 그리다, 붙이다(mount) \/ 실제 코드가 붙었을 때 실행
 - componentWillMount : render 전에 실행 (mount할때 최초 1번만 실행) → react 16.3부터 없어질 예정
+  - render 전에 실행하면 선택자를 조회할 수 없음(만들어지기 전이기 때문) 그래서 잘 사용하지 않음
 - componentDidMount : render 후에 실행 (mount할때 최초 1번만 실행) → AJAX, HTTP ...
 - componentWillReceiveProps : props가 변경됐을때(update) 실행, 파라미터 제공
 - shouldComponentUpdate : 리랜더링을 할지말지 정함 (중요!)
@@ -161,6 +165,8 @@ shouldComponentUpdate(nextProps, nextState){
 ```
 > 숫자증가 버튼을 눌러서 숫자를 증가시킬때 20 부터는 List 컴포넌트의 숫자만 증가함
 
+- 리액트는 바뀐부분만 다시 그린다. 즉, 랜더링을 한번 저장해놓고 바뀌려는 랜더링과 비교해서 똑같으면 넘어가고 달라지는 특정 부분만 업데이트한다. 하지만 그래도 render 메소드는 실행된다. 그래서 render 메소드 자체가 실행 안되게 하는것이 shouldComponentUpdate<br/>즉, 상위 컴포넌트가 랜더링되면 하위 컴포넌트들은 자동으로 랜더링 되고 불필요한 랜더링이 일어날경우 성능의 저하가 일어남으로 하위 랜더링을 막을 때 shouldComponentUpdate를 사용한다.
+
 ```
 componentWillReceiveProps(nextProps){
   console.log('componentWillReceiveProps');
@@ -198,7 +204,7 @@ componentDidUpdate(){
 <br/>![15](img/15.png)
 > render에만 숫자가 올라감
 
-- 그래서, *Update() 메소드에 setState를 쓰게되면 무한루프에 빠짐
+- 그래서, \*Update() 메소드에 setState를 쓰게되면 무한루프에 빠짐
 
 - 개발자도구 react에서 확인
 
@@ -267,7 +273,7 @@ showClick(){
 ```
 {(this.state.show) ? <Open count={num} upCount={this.handleClick.bind(this)}/>:''}
 ```
-> ture일때 하위 컴포넌트를 보여주고 false일때 '' 빈화면을 출력
+> ture일때 하위 컴포넌트를 보여주고 false일때 '' 빈화면을 출력<br/>Open 컴포넌트만 제어해도 그 뒤는 알아서 제어가 됨 (false로 Opne을 닫았지만 Close도 닫힌 모습)
 
 - `{() ? 참:거짓}`
 
@@ -275,6 +281,9 @@ showClick(){
 {(this.state.show) && <Open count={num} upCount={this.handleClick.bind(this)}/>}
 ```
 > 위에 코드를 연산자를 이용해 간결화해줌
+
+- 이러한 기능을 통해 메뉴가 열렸다 닫히는 모습도 컴포넌트가 붙었다 안붙었다 하는 것으로 이해할 수 있음
+
 - 결과
 
 <br/>![gif](img/01.gif)
