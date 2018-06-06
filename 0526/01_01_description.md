@@ -158,7 +158,7 @@ class App extends React.Component{
 ```
 > 여러개를 출력하고싶을때 반드시 return을 괄호로 묶어서 출력
 
-- JSX 문법으로 컴포넌트는 하나만 받아서 리턴하기때문에 ()로 감싸줘야함
+- JSX 문법으로 컴포넌트는 하나만 받아서 리턴하기때문에 `멀티라인` 즉, `()`으로 감싸줘야함
 
 #### 1. CSS 직접 적용
 ```
@@ -263,7 +263,7 @@ return (
 > 아래에 List를 붙여줌
 
 ### List.js
-- 클래스로 사용할것이므로 첫글자를 대문자로 씀
+- 클래스로 사용할것이므로 첫글자를 대문자로 씀 (대문자로 안쓰면 오류남)
 ```
 import React from 'react';
 class List extends React.Component{};
