@@ -6,7 +6,7 @@
   - 컴포넌트의 재사용
 - TIP
 	- [react 강좌](https://velopert.com/3613) 참고
-	- snippet : react코드 자동완성 기능
+	- snippet : react코드 자동완성 기능 (따로 공부할 것)
 	- babel : sublime text 에서 babel 패키지를 다운받으면 알맞은 하이라이터가 보여짐
 
 ## react 설치
