@@ -7,7 +7,7 @@
 - TIP
 	- [react 강좌](https://velopert.com/3613) 참고
 	- snippet : react코드 자동완성 기능 (따로 공부할 것)
-	- babel : sublime text 에서 babel 패키지를 다운받으면 알맞은 하이라이터가 보여짐
+	- babel : sublime text 에서 babel 패키지를 다운받으면 알맞은 하이라이터가 보여짐<br/>)babel을 항상 적용하려면 Open all with current extension as ... 으로 열기)
 
 ## react 설치
 - 프로젝트가 생성될 디렉토리에 전역으로 설치 (ex. downloads)
