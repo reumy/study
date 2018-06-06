@@ -88,6 +88,7 @@ class App extends React.Component{
 <br/>![02](img/02.png)
 > ex6는 class를 많이 사용함 class하나를 레고 한조각이라고 생각해라
 
+- 컴포넌트 class 이름은 꼭 대문자로 사용할 것! 소문자로 작성하면 에러남
 - `extends : 상속받는다는 의미`
 - `render : 화면에 그려주는 역할을 하는 메소드`
 
