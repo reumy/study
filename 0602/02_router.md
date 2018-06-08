@@ -247,7 +247,7 @@ localhost:3000/blog/reumy
 ```
 - 결과
 
-<br/>![01](img/07.png)
+<br/>![01](img/08.png)
 > params title이 reumy로 들어옴 (reumy도 blog안에 있기때문에 blog의 하위개념)
 
 ```
