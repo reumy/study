@@ -1,3 +1,5 @@
+- 0602의 router에 추가로 작업함
+
 ## Switch
 App.js
 ```
