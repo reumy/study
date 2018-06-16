@@ -427,5 +427,6 @@ npm run build
 
 
 ### TIP
+- [선생님 github](https://github.com/riahnrhyme/tp-front/tree/master/src/actions) 참고
 - 글로벌 설치 : 같은 드라이브안에서 전부 사용가능 (C드라이브에 설치하면 C드라이브 전체에서 사용가능 D드라이브에서는 사용 불가능)
 - 리덕스를 이용하면 나에게 들어온 채팅, 알람 등의 숫자가 페이지를 이동해도 변경되거나 지워지지 않는 기능을 구현할 수 있음
