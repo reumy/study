@@ -35,17 +35,14 @@
 
 > 스토어안에 reducers가 있고 reducers가 어떤 기능을하면 store가 그 기능을 받음
 
-#### React
+### React
 - 리액트는 단 방향이라서 올릴 수 없고 최상위만 관여할 수 있어서 복잡해지면 어려워짐
 - Angularjs 양방향 / React : 단방향
 - 오타나 에러가나면 역추적을 해야하는 불편함
 - 소규모 어플리케이션에서는 리액트로만 구현이 가능
 - 재랜더링 시 무조건 하위들만 재랜더링해줌 위에는 불가능
 - 리액트는 부분만 적용이 가능
-> 네이버는 메일만 react를 적용함
-```
-script type 으로 선언하고 \<div id=root\> 만 넣으면 적용 됨
-```
+> 네이버는 메일만 react를 적용함 `script type`으로 선언하고 `<div id=root>`만 넣으면 적용 됨
 
 ### 구현해야할 것
 - ui → reducers → store → state → ui
