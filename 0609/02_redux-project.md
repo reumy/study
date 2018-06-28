@@ -53,7 +53,11 @@
 ```
 create-react-app redux-project
 ```
-> 디렉토리명 redeux-project으로 리액트 설치 (리덕스 기본개념 세팅)
+> 디렉토리명 redeux-project으로 리액트 설치
+```
+npm install --save react-redux
+```
+> 리덕스 기본개념 세팅
 ```
 cd redux-project
 ```
