@@ -108,6 +108,7 @@ supervisor server.js
 > 실행
 
 - 결과
+
 <br/>[06](img/06.png)
 > 프론트와 백의 코드가 서로 달라 사용할 수 없어서 state로 해준 것
 
@@ -199,6 +200,7 @@ app.use(cors);
 > 미들웨어로 등록, express 들어가기 전에 중간에 처리함
 
 - 결과
+
 <br/>[05](img/05.png)
 > 통신하기 버튼 누르면 console.log(response) 의 결과가 뿌려짐
 
