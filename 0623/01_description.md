@@ -109,7 +109,7 @@ supervisor server.js
 
 - 결과
 
-<br/>[06](img/06.png)
+<br/>![06](img/06.png)
 > 프론트와 백의 코드가 서로 달라 사용할 수 없어서 state로 해준 것
 
 
@@ -182,7 +182,7 @@ handleClick(){
 
 - 결과
 
-<br/>[04](img/04.png)
+<br/>![04](img/04.png)
 > 통신하기 버튼을 누르면 서버가 나에게 응답을 안해준다는 Access-control-allowtrigin 방화벽 에러가 뜸 cors를 이용해 해결
 ```
 npm install cors --save
@@ -201,7 +201,7 @@ app.use(cors);
 
 - 결과
 
-<br/>[05](img/05.png)
+<br/>![05](img/05.png)
 > 통신하기 버튼 누르면 console.log(response) 의 결과가 뿌려짐
 
 ```
