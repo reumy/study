@@ -287,14 +287,16 @@ app.get('/test',(req,res)=>{
 > err : 에러 / rows : 결과
 
 - 결과
-<br/>[06](img/06.png)
+
+<br/>![06](img/06.png)
 > DB의 첫번째 로우값을 가져옴
 
 ```
 res.json({result : rows});
 ```
 - 결과
-<br/>[08](img/08.png)
+
+<br/>![08](img/08.png)
 > 모든 로우값을 가져옴
 
 Test.js
@@ -345,7 +347,8 @@ this.setState({list:response.data.result})
 > key는 반드시 들어와야하고 유니크해야하므로 id를 사용함
 
 - 결과
-<br/>[09](img/09.png)
+
+<br/>![09](img/09.png)
 > 통신하기 버튼을 누르면 아래에 DB값이 뿌려짐
 
 
@@ -485,6 +488,7 @@ app.delete('/test/:id',(req,res)=>{...})
 > id를 params로 받음
 
 - 결과
+
 <br/>![10](img/10.gif)<br/>
 - 통신하기 버튼을 누르면 전체를 갈아치운것이 됨
 
