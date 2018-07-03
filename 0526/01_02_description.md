@@ -88,7 +88,7 @@ handleClick = () => {
   console.log(this);
 }
 ```
-> 단, ex6 문법으로 사용시에는 인식함
+> 단, es6 문법으로 사용시에는 인식함
 
 ```
 <button onClick={this.handleClick.bind(this)}>숫자증가</button>
