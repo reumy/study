@@ -249,7 +249,7 @@ const reducers = combineReducers({
   control
 })
 ```
-> control : control ex6 문법에서는 키와 벨류값이 같을때 한번만 써줘도 됨 즉, control만 써도 가능
+> control : control es6 문법에서는 키와 벨류값이 같을때 한번만 써줘도 됨 즉, control만 써도 가능
 ```
 export default reducers;
 ```
