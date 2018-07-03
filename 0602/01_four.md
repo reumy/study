@@ -86,7 +86,7 @@ onClick={this.handleClick.bind(this)}
 ```
 ref={ref=>this.data=ref}
 ```
-> ex6문법으로 ref={(ref)=>{return this.data=ref}} 과 같으며 한줄일때는 return이 생략가능하고 괄호가 하나일땐 괄호도 생략가능<br/>함수로 풀어쓰면 function(ref){return this.data=ref}와 같음
+> es6문법으로 ref={(ref)=>{return this.data=ref}} 과 같으며 한줄일때는 return이 생략가능하고 괄호가 하나일땐 괄호도 생략가능<br/>함수로 풀어쓰면 function(ref){return this.data=ref}와 같음
 
 > {함수} 첫번째 들어오는 파라미터 (ref)는 자신이고 참조시키는 참조기능을 담은 자신을 this.data에 넣음 여기에서 this.data는 input을 가르킴<br/>변수 var와 같지만 this를 쓴 이유는 class 안에서 공유하기 위함
 
@@ -331,7 +331,7 @@ var a = {b:10, c:20}
 var c = 'b'
 a[c];  // 10
 ```
-- 새로운 ex6 문법 (예약어)
+- 새로운 es6 문법 (예약어)
 ```
 var a = {b:10, c:20}
 {...a, d:30}         // {b:10, c:20, d:30}
@@ -341,7 +341,7 @@ var {b, c} = a
 b                    // 10
 c                    // 20
 ```
-- 함수의 ex6 문법
+- 함수의 es6 문법
 ```
 function name(a){
   return a * a;
