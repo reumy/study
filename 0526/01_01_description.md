@@ -47,9 +47,9 @@ npm start
 ```
 import React from 'react';
 ```
-> react를 사용가능하게함<br/>ex6 문법으로 ex5 문법의 var React = require('react');와 같은 의미
+> react를 사용가능하게함<br/>es6 문법으로 es5 문법의 var React = require('react');와 같은 의미
 
-- `import : javascript의 새로운 문법으로 ex6 문법으로 작성한 코드를 ex5 문법으로 바꿔줌`<br/>그래서 서버가 필요함 (노드를 자동으로 띄워주는 것)
+- `import : javascript의 새로운 문법으로 es6 문법으로 작성한 코드를 es5 문법으로 바꿔줌`<br/>그래서 서버가 필요함 (노드를 자동으로 띄워주는 것)
 
 ```
 import ReactDOM from 'react-dom';
@@ -87,7 +87,7 @@ class App extends React.Component{
 - 결과
 
 <br/>![02](img/02.png)
-> ex6는 class를 많이 사용함 class하나를 레고 한조각이라고 생각해라
+> es6는 class를 많이 사용함 class하나를 레고 한조각이라고 생각해라
 
 - 컴포넌트 class 이름은 꼭 대문자로 사용할 것! 소문자로 작성하면 에러남
 - `extends : 상속받는다는 의미`
