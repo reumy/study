@@ -106,7 +106,7 @@ export default Register;
 > 라우트가 전달해주는 props에 {...props} 기존의 객체를 그대로 가짐 (es6)
 - 결과
 
-![02](img/02.png)<br />
+![02](img/10.png)<br />
 
 
 ## 로그인
