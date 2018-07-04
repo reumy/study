@@ -155,8 +155,8 @@ app.post('/login',(req,res)=>{
 > 결과를 만족했다는 의미로 1을 단순히 명명한 것
 
 ## DB
-<br/>![04](img/04.png)
-<br/>![05](img/05.png)<br/>
+<br/>![04](img/04.png)<br/>
+<br/>![05](img/05.png)<br/><br/>
 
 - 결과
 
@@ -175,7 +175,10 @@ app.post('/login',(req,res)=>{
 ```
 `SELECT * FROM users WHERE username="${req.body.username}"`
 ```
-- `｀｀ (블록쿼터) : 비구조적할당 방식`<br/>이 방식일때는 엔터를 쳐도 됨 (엔터치고 \ 로 이어주는 등의 방식이 필요없음)
+```
+`${}` (블록쿼터) : 비구조적할당 방식
+```
+> 이 방식일때는 엔터를 쳐도 됨 (엔터치고 \ 로 이어주는 등의 방식이 필요없음)
 ```
 err && console.log(err);
 ```
