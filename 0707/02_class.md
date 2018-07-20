@@ -14,7 +14,11 @@ var a = new open();
 
 console.log(a.a);
 ```
-> 결과는 10
+- cmd 에서 결과확인
+```
+node class.js
+```
+>  10
 
 ### es6
 ```
