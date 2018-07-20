@@ -5,7 +5,7 @@
 ### es5
 ```
 function open(){
-	this.a = 10;
+  this.a = 10;
 }
 
 open.prototype.b = 30;  // 상속
@@ -19,9 +19,9 @@ console.log(a.a);
 ### es6
 ```
 class close {
-	constructor(){
-		this.a = 10;
-	}
+  constructor(){
+    this.a = 10;
+  }
 }
 
 var b = new close();
