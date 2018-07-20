@@ -26,7 +26,7 @@ create-react-app shop
 cd shop
 ```
 > shop 디렉토리에 들어감
-- `..cd : 디렉토리 빠져나오기`
+- `cd .. : 디렉토리 빠져나오기`
 ```
 npm start
 ```
