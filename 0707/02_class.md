@@ -18,7 +18,7 @@ console.log(a.a);
 ```
 node class.js
 ```
->  10
+> 결과는 10
 
 ### es6
 ```
