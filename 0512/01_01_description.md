@@ -21,8 +21,8 @@ npm init
 - 사람들이 접속할 수 있게함
 - 아파치, 엔진엑스, 노드 ...
 - 프레임워크 패키지 : 웹을 만드는데 틀이 갖춰진 것
-  - Express 사용할 예정
-  - npm express 검색해서 버전확인 (앞번호가 바뀌면 대규모 변화가 일어난 것)
+  - Express 사용할 예정
+  - npm express 검색해서 버전확인 (앞번호가 바뀌면 대규모 변화가 일어난 것)
 ```
 npm install express --save
 ```
